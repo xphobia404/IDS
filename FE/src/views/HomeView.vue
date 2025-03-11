@@ -1,15 +1,15 @@
 <template>
     <v-container>
-      <ArticleList />
+      <TxList />
     </v-container>
   </template>
   
   <script>
-  import ArticleList from '@/components/ArticleList.vue';
+  import TxList from '@/components/TxList.vue';
   
   export default {
     components: {
-      ArticleList
+      TxList
     }
   };
   </script>

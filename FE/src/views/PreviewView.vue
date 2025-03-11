@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <v-container>
     <v-btn class="mb-4" icon @click="$router.push('/')">
       <v-icon>mdi-arrow-left</v-icon>
@@ -59,4 +59,4 @@ export default {
     };
   }
 };
-</script>
+</script> -->

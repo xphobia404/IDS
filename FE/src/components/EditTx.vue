@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <v-container>
       <v-card v-if="article">
         <v-card-title>Edit Article</v-card-title>
@@ -34,4 +34,4 @@
     }
   };
   </script>
-  
+   -->

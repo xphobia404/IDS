@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
   <v-container>
     <v-card v-if="article">
       <v-card-title>{{ article.title }}</v-card-title>
@@ -28,4 +28,4 @@ export default {
     this.article = await getArticleById(id);
   }
 };
-</script>
+</script> -->

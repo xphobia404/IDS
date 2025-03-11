@@ -12,6 +12,7 @@ import com.ids.BE.transaction.service.TransactionsService;
 
 @RequestMapping("/transactions")
 @RestController
+@CrossOrigin(origins = "http://localhost:5173")
 public class TransactionsController {
 
     @Autowired

@@ -9,52 +9,42 @@ const api = axios.create({
   },
 });
 
-export const getArticles = async (limit = 10, offset = 0) => {
+export const getData = async () => {
   try {
-    const response = await api.get(`article/?limit=${limit}&offset=${offset}`);
+    const response = await api.get('transactions/list');
     return response.data;
   } catch (error) {
-    console.error('Error fetching articles:', error);
+    console.error('Error fetching data:', error);
     throw error;
   }
 };
 
-export const getArticleById = async (id) => {
+export const getDetail = async (data) => {
   try {
-    const response = await api.get(`article/${id}`);
+    const response = await api.post('transactions/detail', data);
     return response.data;
   } catch (error) {
-    console.error('Error fetching article:', error);
+    console.error('Error fetching data:', error);
     throw error;
   }
 };
 
-export const createArticle = async (articleData) => {
+export const insertTx = async (txData) => {
   try {
-    const response = await api.post('article', articleData);
+    const response = await api.post('transactions/insert', txData);
     return response.data;
   } catch (error) {
-    console.error('Error creating article:', error);
+    console.error('Error Insert data:', error);
     throw error;
   }
 };
 
-export const updateArticle = async (articleData) => {
+export const updateTx = async (txData) => {
   try {
-    const response = await api.post('article/update', articleData);
+    const response = await api.post('transactions/update', txData);
     return response.data;
   } catch (error) {
-    console.error('Error updating article:', error);
-    throw error;
-  }
-};
-
-export const deleteArticle = async (id) => {
-  try {
-    const response = await api.post('article/delete', { id });
-    return response.data;
-  } catch (error) {
-    console.error('Error deleting article:', error);
+    console.error('Error update data:', error);
     throw error;
   }
 };
